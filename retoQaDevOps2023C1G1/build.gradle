@@ -1,0 +1,67 @@
+group 'com.sofkau'
+version '1.0-SNAPSHOT'
+defaultTasks 'clean', 'test', 'aggregate'
+
+apply plugin: 'java'
+apply plugin: 'java-library'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: 'org.sonarqube'
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.2.12")
+        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0")
+    }
+}
+
+sonarqube {
+    properties {
+        property 'sonar.host.url', 'http://localhost:9000' // URL del servidor de SonarQube
+        property 'sonar.login', 'sqp_91e6d9a4feefb4e0dd911d5128c288f1fdbb118e' // Token de acceso de SonarQube
+        property 'sonar.projectKey', 'RetoQADevOps' // Clave del proyecto en SonarQube
+        property 'sonar.projectName', 'RetoQADevOps' // Nombre del proyecto en SonarQube
+    }
+}
+
+
+ext {
+    junitVersion = '5.7.2'
+    serenityVersion = '2.2.9'
+    serenityCucumberVersion = '2.2.6'
+    apachePoiVersion = '3.17'
+}
+
+dependencies {
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junitVersion
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: serenityVersion
+    implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: serenityVersion
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: serenityVersion
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: serenityVersion
+    implementation group: 'net.serenity-bdd', name: 'serenity-assertions', version: serenityVersion
+    implementation group: 'net.serenity-bdd', name: 'serenity-ensure', version: serenityVersion
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: serenityVersion
+    implementation group: 'net.serenity-bdd', name: 'serenity-cucumber5', version: serenityCucumberVersion
+    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.3'
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.11.3'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0'
+    implementation 'org.projectlombok:lombok:1.18.22'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+}
+
+test {
+    testLogging.showStandardStreams = true
+}
+
+
+gradle.startParameter.continueOnFailure = true
