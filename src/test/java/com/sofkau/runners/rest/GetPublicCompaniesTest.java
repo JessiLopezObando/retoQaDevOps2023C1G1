@@ -7,8 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/rest/getexchanges.feature"},
-        glue = {"com.sofkau.stepdefinitions"}
+        features = {"src/test/resources/features/rest/getpubliccompanies.feature"},
+        glue = {"com.sofkau.stepdefinitions"},
+        tags = {""}
 )
-public class GetExchangesTest {
+public class GetPublicCompaniesTest {
 }
