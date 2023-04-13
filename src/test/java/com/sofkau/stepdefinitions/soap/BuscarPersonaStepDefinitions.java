@@ -34,7 +34,7 @@ public class BuscarPersonaStepDefinitions extends ApiSetUp {
             LOGGER.info("INICIA LA AUTOMATIZACION");
             loadBody();
         } catch (Exception e) {
-            LOGGER.info(" fallo la configuracion inicial");
+            LOGGER.info("fallo la configuracion inicial");
             LOGGER.warn(e.getMessage());
             Assertions.fail();
         }

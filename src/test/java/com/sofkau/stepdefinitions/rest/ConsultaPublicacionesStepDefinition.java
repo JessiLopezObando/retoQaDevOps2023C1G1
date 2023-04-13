@@ -41,14 +41,14 @@ public class ConsultaPublicacionesStepDefinition extends ApiSetUp {
         try{
             Response actuallResponse = returnGetResponse().answeredBy(actor);
             actor.should(
-                    seeThatResponse("****** El codigo de respuesta de la peticion seria --> " + codigo,
+                    seeThatResponse("****** El codigo de respuesta de la peticion es --> " + codigo,
                             response -> response.statusCode(codigo)),
-                    seeThat("Retorna información",
+                    seeThat("Retorna la información siguiente",
                             act -> actuallResponse, notNullValue())
             );
-            LOGGER.info("Respuesta status code: " + codigo);
+            LOGGER.info("Respuesta del status code: " + codigo);
         }catch (Exception e){
-            LOGGER.error("****** Se tiene el siguiente error -->: ", e);
+            LOGGER.error("****** Se tiene el siguiente error de la peticion-->: ", e);
             throw e;
         }
     }

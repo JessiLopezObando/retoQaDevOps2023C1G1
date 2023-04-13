@@ -33,10 +33,10 @@ public class LenguajePaisStepdeDefinitions extends ApiSetUp {
     public void the_user_wants_to_know_the_language_of_a_country() {
         try {
             setUp(SOAP_BASE_URL.getValue());
-            LOGGER.info("INICIA LA AUTOMATIZACION");
+            LOGGER.info("INICIA LA AUTOMATIZACION DEL SERVICIO");
             loadBody();
         } catch (Exception e) {
-            LOGGER.info(" fallo la configuracion inicial");
+            LOGGER.info("fallo la configuracion inicial del servicio");
             LOGGER.warn(e.getMessage());
             Assertions.fail();
         }
@@ -51,9 +51,9 @@ public class LenguajePaisStepdeDefinitions extends ApiSetUp {
                             .withTheHeaders(headers().getHeadersCollection())
                             .andTheBody(body)
             );
-            LOGGER.info("Realiza la peticion");
+            LOGGER.info("Realiza la peticion del servicio");
         } catch (Exception e) {
-            LOGGER.info(" fallo al momento de realizar la peticion");
+            LOGGER.info("fallo al momento de realizar la peticion del servicio");
             LOGGER.warn(e.getMessage());
             Assertions.fail();
         }
@@ -64,7 +64,7 @@ public class LenguajePaisStepdeDefinitions extends ApiSetUp {
         try {
             LOGGER.info(new String(LastResponse.received().answeredBy(actor).asByteArray(), StandardCharsets.UTF_8));
             actor.should(
-                    seeThatResponse("el codigo de respuesta es: " + HttpStatus.SC_OK,
+                    seeThatResponse("el codigo de respuesta es el siguiente: " + HttpStatus.SC_OK,
                             response -> response.statusCode(HttpStatus.SC_OK)),
                     (Consequence) seeThat(" El idioma de la capital es",
                             responseSoap(), containsString("English"))
