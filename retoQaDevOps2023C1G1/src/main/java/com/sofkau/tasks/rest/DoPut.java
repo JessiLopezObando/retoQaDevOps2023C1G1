@@ -1,39 +1,39 @@
-package com.sofkau.tasks;
+package com.sofkau.tasks.rest;
 
-import com.sofkau.interactions.OurPost;
+import com.sofkau.interactions.rest.OurPut;
 import io.restassured.http.ContentType;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Post;
 
-public class DoPost implements Task {
+public class DoPut implements Task {
+
     private String resource;
     private Object requestBody;
 
-
-    public DoPost withTheResource(String resource){
-        this.resource=resource;
+    public DoPut withResource(String resource) {
+        this.resource = resource;
         return this;
     }
 
-    public DoPost andTheRequestBody(Object requestBody){
-        this.requestBody=requestBody;
+    public DoPut andTheRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                OurPost.to(resource)
+                OurPut.to(resource)
                         .with(
                                 requestSpecification -> requestSpecification.relaxedHTTPSValidation()
                                         .contentType(ContentType.JSON)
                                         .body(requestBody)
+
                         )
         );
-
     }
 
-    public static DoPost doPost(){
-        return new DoPost();
+    public static DoPut doPut(){
+        return new DoPut();
     }
 }

@@ -1,7 +1,6 @@
-package com.sofkau.interactions;
+package com.sofkau.interactions.rest;
 
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.rest.interactions.Post;
 import net.serenitybdd.screenplay.rest.interactions.RestInteraction;
 import net.thucydides.core.annotations.Step;
 

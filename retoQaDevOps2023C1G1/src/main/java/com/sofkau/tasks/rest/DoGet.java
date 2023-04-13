@@ -1,6 +1,6 @@
-package com.sofkau.tasks;
+package com.sofkau.tasks.rest;
 
-import com.sofkau.interactions.OurGet;
+import com.sofkau.interactions.rest.OurGet;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 

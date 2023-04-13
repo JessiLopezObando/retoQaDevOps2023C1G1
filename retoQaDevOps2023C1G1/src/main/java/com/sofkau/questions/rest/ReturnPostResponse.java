@@ -1,6 +1,6 @@
-package com.sofkau.questions;
+package com.sofkau.questions.rest;
 
-import com.sofkau.models.Posts;
+import com.sofkau.models.rest.Posts;
 import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.Question;
 public class ReturnPostResponse implements Question<Response> {
     @Override
     public Response answeredBy(Actor actor) {
+
         return (Response) SerenityRest.lastResponse().as(Posts.class);
     }
 
