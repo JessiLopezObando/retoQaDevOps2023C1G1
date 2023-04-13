@@ -16,8 +16,6 @@ public enum Path {
     RESOURCE_PERSONA("csp/samples/SOAP.Demo.cls"),
     BODY_PATH_PERSONA("src/test/resources/soap/filepersona.xml"),
 
-
-
     SOAP_NUMERO_BASE_URL("https://www.dataaccess.com/"),
     RESOURCE_NUMERO("webservicesserver/numberconversion.wso"),
     BODY_PATH_NUMERO("src/test/resources/soap/fileNumeroALetra.xml"),
