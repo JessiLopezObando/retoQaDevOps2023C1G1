@@ -24,7 +24,10 @@ public enum Path {
 
     CAT_BASE_URI("https://catfact.ninja/fact?max_length=140"),
     DELETE_PRODUCTS_BASE("https://dummyjson.com/"),
-    DELETE_PRODUCTS("products/");
+    DELETE_PRODUCTS("products/"),
+    SOAP_CONVERTIDOR_BASE_URL("https://www.dataaccess.com/"),
+    RESOURCE_CONVERTIDOR("webservicesserver/numberconversion.wso"),
+    BODY_CONVERTIDOR_PATH   ("src/test/resources/soap/fileconvertirnumero.xml");
 
 
 
