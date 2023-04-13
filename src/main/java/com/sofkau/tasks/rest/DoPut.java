@@ -1,5 +1,6 @@
 package com.sofkau.tasks.rest;
-
+import com.sofkau.interactions.rest.OurPost;
+import com.sofkau.interactions.rest.OurPut;
 import com.sofkau.interactions.rest.OurPut;
 import io.restassured.http.ContentType;
 import net.serenitybdd.screenplay.Actor;
