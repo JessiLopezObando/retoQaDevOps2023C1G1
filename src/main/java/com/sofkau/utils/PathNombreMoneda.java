@@ -1,9 +1,10 @@
 package com.sofkau.utils;
 
 public enum PathNombreMoneda {
-    SOAP_MONEDA_BASE_URL("http://webservices.oorsprong.org/"),
-    RESOURCE_MONEDAD("websamples.countryinfo/CountryInfoService.wso"),
-    BODY_PATH_MONEDA("src/test/resources/soap/filenombremoneda.xml");
+    SOAP_BASE_URL("http://webservices.oorsprong.org/"),
+    RESOURCE_SOAP("websamples.countryinfo/CountryInfoService.wso"),
+    BODY_PATH_MONEDA("src/test/resources/soap/filenombremoneda.xml"),
+    BODY_PATH_LENGUAJE("src/test/resources/soap/filelenguaje.xml");
 
     private String value;
 
