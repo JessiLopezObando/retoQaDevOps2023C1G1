@@ -23,15 +23,25 @@ public enum Path {
     BODY_PATH_NUMERO("src/test/resources/soap/fileNumeroALetra.xml"),
 
 
+
     //RUTAS-MELISSA
     CAT_BASE_URI("https://catfact.ninja/fact?max_length=140"),
     DELETE_PRODUCTS_BASE("https://dummyjson.com/"),
     DELETE_PRODUCTS("products/"),
     SOAP_CONVERTIDOR_BASE_URL("https://www.dataaccess.com/"),
     RESOURCE_CONVERTIDOR("webservicesserver/numberconversion.wso"),
-    BODY_CONVERTIDOR_PATH   ("src/test/resources/soap/fileconvertirnumero.xml");
+    BODY_CONVERTIDOR_PATH   ("src/test/resources/soap/fileconvertirnumero.xml"),
 
 
+
+    //Rutas Jessica
+    SOAP_FIND_BY_NAME_BASE_URL("http://www.crcind.com/"),
+    RESOURCE_FIND_BY_NAME("csp/samples/SOAP.Demo.cls"),
+    BODY_FIND_BY_NAME_PATH("src/test/resources/soap/findByName.xml"),
+
+    SOAP_LOOK_UP_CITY_BASE_URL("http://www.crcind.com/"),
+    RESOURCE_LOOK_UP_CITY("csp/samples/SOAP.Demo.cls"),
+    BODY_LOOK_UP_CITY_PATH("src/test/resources/soap/lookUpCity.xml");
 
 
 
