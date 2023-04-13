@@ -30,7 +30,8 @@ public class ProductsStepDefinition extends ApiSetUp {
     public void iSendADELETERequestWithTheSpecificOfAProduct(String id) {
         try{
             actor.attemptsTo(
-            doDelete().withTheResource(DELETE_PRODUCTS.getValue() + id)
+            doDelete().withTheResource(DELETE_PRODUCTS.getValue())
+                    .andWithTheNumber(id)
             );
             System.out.println(SerenityRest.lastResponse().body().asString());
         } catch (Exception e){
