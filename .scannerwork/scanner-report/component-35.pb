@@ -1,0 +1,1 @@
+# 2javaX<hr2src/main/java/com/sofkau/models/rest/Response.java

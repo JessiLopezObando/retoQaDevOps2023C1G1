@@ -1,0 +1,1 @@
+* 2javaXhr9src/main/java/com/sofkau/models/soap/HeadersCurrency.java

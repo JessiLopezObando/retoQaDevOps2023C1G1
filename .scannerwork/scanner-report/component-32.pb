@@ -1,0 +1,1 @@
+  2javaX?hrCsrc/main/java/com/sofkau/models/rest/MinimumSystemRequirements.java

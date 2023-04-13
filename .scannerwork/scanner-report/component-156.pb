@@ -1,0 +1,1 @@
+œ 2xmlX	hr&src/test/resources/soap/lookUpCity.xml
