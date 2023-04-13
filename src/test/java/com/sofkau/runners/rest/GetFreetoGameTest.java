@@ -7,8 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/rest/buscargame"},
-        glue = {"com.sofkau.stepdefinitons"}
+        features = {"src/test/resources/features/rest/buscargame.feature"},
+        glue = {"com.sofkau.stepdefinitons"},
+        tags = {""}
 
 )
 public class GetFreetoGameTest {
