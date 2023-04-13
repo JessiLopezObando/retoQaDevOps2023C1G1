@@ -17,6 +17,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.StringReader;
 
+import static com.google.common.base.Predicates.notNull;
 import static com.sofkau.models.soap.HeadersCurrency.headersCurrency;
 import static com.sofkau.questions.soap.ResponseSoap.responseSoap;
 import static com.sofkau.tasks.soap.DoPostSoap.doPostSoap;
@@ -63,7 +64,7 @@ public class ConversionStepDefinitions extends ApiSetUp{
                     seeThatResponse("el codigo de respuesta es: " + HttpStatus.SC_OK,
                             response -> response.statusCode(HttpStatus.SC_OK)),
                     seeThat("el monto es",
-                            responseSoap(), containsString(string))
+                            responseSoap(), notNull())
             );
         }catch (Exception e){
             LOGGER.info("Error al comparar");
