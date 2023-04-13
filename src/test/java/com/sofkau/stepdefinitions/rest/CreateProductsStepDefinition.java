@@ -30,16 +30,17 @@ public class CreateProductsStepDefinition extends ApiSetUp {
 
     private Product producto = new Product();
 
-    @Given("el administrador esta en la pagina FakerProducts seccion crear producto")
-    public void elAdministradorEstaEnLaPaginaFakerProductsSeccionCrearProducto() {
+
+    @Given("the administrator is on the FakerProducts page in the create product section")
+    public void theAdministratorIsOnTheFakerProductsPageInTheCreateProductSection() {
         setUp(PRODUCT_RESOURCES_BASE_URL.getValue());
 
     }
 
 
-    @When("el administrador crea un nuevo producto con {string}, {double}, {string}, {string}, {string}")
-    public void elAdministradorCreaUnNuevoProductoCon(String title, Double precio, String descripcion, String imagen, String categoria) {
-        setValores(title, precio, descripcion, imagen, categoria);
+    @When("the administrator creates a new product with {string}, {double}, {string}, {string}, {string}")
+    public void theAdministratorCreatesANewProductWith(String title, Double precio, String descripcion, String img, String categoria) {
+        setValores(title, precio, descripcion, img, categoria);
         actor.attemptsTo(
                 doPost()
                         .withTheResource(PRODUCT_SUCCESSFUL_RESOURCES.getValue())
@@ -50,8 +51,8 @@ public class CreateProductsStepDefinition extends ApiSetUp {
     }
 
 
-    @Then("el administrador debe ver un mensaje con informacion del nuevo producto con un estatus {int}")
-    public void elAdministradorDebeVerUnMensajeConInformacionDelNuevoProductoConUnEstatus(Integer code) {
+    @Then("the administrator should see a message with information about the new product with a {int} status")
+    public void theAdministratorShouldSeeAMessageWithInformationAboutTheNewProductWithAStatus(Integer code) {
         try {
             // Obtener la respuesta del servidor con Serenity BDD
             Product actualResponse = returnQuestionProduct().answeredBy(actor);

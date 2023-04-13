@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
 import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
+
 import static com.sofkau.questions.rest.ReturnQuestionGames.returnQuestionGames;
 import static com.sofkau.tasks.rest.DoGet.doGet;
 import static com.sofkau.utils.FreetoGameResources.*;
@@ -19,13 +20,14 @@ public class GetFreetogameStepDefinition extends ApiSetUp {
 
     public static Logger LOGGER = Logger.getLogger(GetFreetogameStepDefinition.class);
 
-    @Given("El jugador se encuentra dentro de la pagina adecuada para realizar la consulta")
-    public void elJugadorSeEncuentraDentroDeLaPaginaAdecuadaParaRealizarLaConsulta() {
+
+    @Given("the player is on the appropriate page to make the query")
+    public void thePlayerIsOnTheAppropriatePageToMakeTheQuery() {
         setUp(FREETOGAME_RESOURCES_BASE_URL.getValue());
     }
 
-    @When("El jugador realiza la consulta consulta del  juego por {int}")
-    public void elJugadorRealizaLaConsultaConsultaDelJuegoPor(Integer id) {
+    @When("the player makes a request to search for the game by {int}")
+    public void thePlayerMakesARequestToSearchForTheGameBy(Integer id) {
         actor.attemptsTo(
                 doGet()
                         .withTheResource(FREETOGAME_GET_RESOURCE.getValue() + id)
@@ -34,8 +36,8 @@ public class GetFreetogameStepDefinition extends ApiSetUp {
     }
 
 
-    @Then("El jugador recibe un estadtus {int} con el juego encontrado")
-    public void elJugadorRecibeUnEstadtusConElJuegoEncontrado(Integer code) {
+    @Then("the player receives a {int} status with the game found.")
+    public void thePlayerReceivesAStatusWithTheGameFound(Integer code) {
         ResponseGame actualResponse = returnQuestionGames().answeredBy(actor);
         LOGGER.info("respuesta de la api-->" + actualResponse);
 

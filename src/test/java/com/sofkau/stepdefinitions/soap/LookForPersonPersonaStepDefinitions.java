@@ -20,15 +20,15 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 import static org.hamcrest.CoreMatchers.containsString;
 
-public class BuscarPersonaStepDefinitions extends ApiSetUp {
+public class LookForPersonPersonaStepDefinitions extends ApiSetUp {
 
 
     String body;
-    private static final Logger LOGGER = Logger.getLogger(BuscarPersonaStepDefinitions.class);
+    private static final Logger LOGGER = Logger.getLogger(LookForPersonPersonaStepDefinitions.class);
 
 
-    @Given("el administrador quiere buscar una persona")
-    public void elAdministradorQuiereBuscarUnaPersona() {
+    @Given("the administrator wants to search for a person")
+    public void theAdministratorWantsToSearchForAPerson() {
         try {
             setUp(SOAP_PERSONA_BASE_URL.getValue());
             LOGGER.info("INICIA LA AUTOMATIZACION");
@@ -40,8 +40,9 @@ public class BuscarPersonaStepDefinitions extends ApiSetUp {
         }
     }
 
-    @When("el administrador realiza la peticion de busqueda de la persona por su codigo")
-    public void elAdministradorRealizaLaPeticionDeBusquedaDeLaPersonaPorSuCodigo() {
+
+    @When("the administrator makes a request to search for the person by their code")
+    public void theAdministratorMakesARequestToSearchForThePersonByTheirCode() {
         try {
             actor.attemptsTo(
                     doPostSoap()
@@ -57,8 +58,9 @@ public class BuscarPersonaStepDefinitions extends ApiSetUp {
         }
     }
 
-    @Then("el administrador deberia ver llos datos de la persona asociada al codigo")
-    public void elAdministradorDeberiaVerLlosDatosDeLaPersonaAsociadaAlCodigo() {
+
+    @Then("the administrator should see the data of the person associated with the code.")
+    public void theAdministratorShouldSeeTheDataOfThePersonAssociatedWithTheCode() {
         try {
             LOGGER.info(new String(LastResponse.received().answeredBy(actor).asByteArray(), StandardCharsets.UTF_8));
             actor.should(
@@ -75,7 +77,6 @@ public class BuscarPersonaStepDefinitions extends ApiSetUp {
         }
 
     }
-
 
 
     private void loadBody() {

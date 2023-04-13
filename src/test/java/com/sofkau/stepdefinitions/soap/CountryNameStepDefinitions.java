@@ -20,15 +20,14 @@ import static com.sofkau.utils.ManageFile.readFile;
 import static com.sofkau.utils.Path.*;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 
-public class PaisStepDefinitions extends ApiSetUp {
+public class CountryNameStepDefinitions extends ApiSetUp {
 
 
     String body;
-    private static final Logger LOGGER = Logger.getLogger(PaisStepDefinitions.class);
+    private static final Logger LOGGER = Logger.getLogger(CountryNameStepDefinitions.class);
 
-
-    @Given("el administrador quiere buscar un pais por el codigo internacional corresondiente")
-    public void elAdministradorQuiereBuscarUnPaisPorElCodigoInternacionalCorresondiente() {
+    @Given("the administrator wants to search for a country by its corresponding international code")
+    public void theAdministratorWantsToSearchForACountryByItsCorrespondingInternationalCode() {
         try {
             setUp(SOAP_CAPITAL_BASE_URL.getValue());
             LOGGER.info("INICIA LA AUTOMATIZACION");
@@ -40,9 +39,9 @@ public class PaisStepDefinitions extends ApiSetUp {
     }
 
 
-    @When("el administrador realiza la peticion de busqueda del pais con su {string}")
-    public void elAdministradorRealizaLaPeticionDeBusquedaDelPaisConSu(String codigo) {
-        loadBody(codigo);
+    @When("the administrator makes a request to search for the country with the {string} code")
+    public void theAdministratorMakesARequestToSearchForTheCountryWithTheCode(String code) {
+        loadBody(code);
         try {
             actor.attemptsTo(
                     doPostSoap()
@@ -58,8 +57,9 @@ public class PaisStepDefinitions extends ApiSetUp {
         }
     }
 
-    @Then("el administrador deberia ver el nombre del pais corresponiente al codigo proporcionado y un status {int}")
-    public void elAdministradorDeberiaVerElNombreDelPaisCorresponienteAlCodigoProporcionadoYUnStatus(Integer code) {
+    @Then("the administrator should see the name of the country corresponding to the provided code and a {int}")
+    public void theAdministratorShouldSeeTheNameOfTheCountryCorrespondingToTheProvidedCodeAndA(Integer code) {
+
 
         String responseBody = new String(LastResponse.received().answeredBy(actor).asByteArray(), StandardCharsets.UTF_8);
 
