@@ -1,0 +1,1 @@
+ž 2xmlX	hr2src/test/resources/soap/subtractioncalculadora.xml

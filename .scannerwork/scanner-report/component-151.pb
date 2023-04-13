@@ -1,0 +1,1 @@
+— 2xmlXhr(src/test/resources/soap/filecurrency.xml
