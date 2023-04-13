@@ -31,8 +31,6 @@ public class GetFreetogameStepDefinition extends ApiSetUp {
                         .withTheResource(FREETOGAME_GET_RESOURCE.getValue() + id)
         );
         System.out.println(SerenityRest.lastResponse().body().asString());
-
-
     }
 
 

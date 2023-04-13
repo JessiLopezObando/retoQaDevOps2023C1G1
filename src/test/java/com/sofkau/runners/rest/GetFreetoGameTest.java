@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = {"src/test/resources/features/rest/buscargame.feature"},
-        glue = {"com.sofkau.stepdefinitons"},
+        glue = {"com.sofkau.stepdefinitions"},
         tags = {""}
 
 )
