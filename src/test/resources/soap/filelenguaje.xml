@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">
+    <soap:Header/>
+    <soap:Body>
+        <web:LanguageName>
+            <web:sISOCode>%s</web:sISOCode>
+        </web:LanguageName>
+    </soap:Body>
+</soap:Envelope>
