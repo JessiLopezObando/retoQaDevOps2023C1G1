@@ -21,7 +21,7 @@ import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeT
 import static org.hamcrest.CoreMatchers.containsString;
 
 public class SubtractionCalculadoraStepDefinitions extends ApiSetUp {
-    
+
     String body;
     private static final Logger LOGGER = Logger.getLogger(SubtractionCalculadoraStepDefinitions.class);
 
