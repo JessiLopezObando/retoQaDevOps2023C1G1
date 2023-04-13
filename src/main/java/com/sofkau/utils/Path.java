@@ -21,7 +21,7 @@ public enum Path {
     BODY_PATH_NUMERO("src/test/resources/soap/fileNumeroALetra.xml"),
 
 
-
+    //RUTAS-MELISSA
     CAT_BASE_URI("https://catfact.ninja/fact?max_length=140"),
     DELETE_PRODUCTS_BASE("https://dummyjson.com/"),
     DELETE_PRODUCTS("products/"),
