@@ -9,7 +9,9 @@ public enum Path {
     CALCULATOR_BODY_PATH("src/test/resources/soap/filecalculadora.xml"),
     SOAP_CALCULATOR_URL("http://www.dneonline.com/"),
     RESOURCE_SUM("calculator.asmx"),
-
+    CURRENCY_BODY_PATH("src/test/resources/soap/filecurrency.xml"),
+    SOAP_DIVISAS_BASE_URL("http://fx.currencysystem.com/"),
+    RESOURCE_CURRENCY("webservices/CurrencyServer4.asmx"),
     SOAP_PERSONA_BASE_URL("http://www.crcind.com/"),
     RESOURCE_PERSONA("csp/samples/SOAP.Demo.cls"),
     BODY_PATH_PERSONA("src/test/resources/soap/filepersona.xml"),
