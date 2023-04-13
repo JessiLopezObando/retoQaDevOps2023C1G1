@@ -21,10 +21,14 @@ public enum Path {
     BODY_PATH_NUMERO("src/test/resources/soap/fileNumeroALetra.xml"),
 
 
-    //Ruta Jessica
+    //Rutas Jessica
     SOAP_FIND_BY_NAME_BASE_URL("http://www.crcind.com/"),
     RESOURCE_FIND_BY_NAME("csp/samples/SOAP.Demo.cls"),
-    BODY_FIND_BY_NAME_PATH("src/test/resources/soap/findByName.xml");
+    BODY_FIND_BY_NAME_PATH("src/test/resources/soap/findByName.xml"),
+
+    SOAP_LOOK_UP_CITY_BASE_URL("http://www.crcind.com/"),
+    RESOURCE_LOOK_UP_CITY("csp/samples/SOAP.Demo.cls"),
+    BODY_LOOK_UP_CITY_PATH("src/test/resources/soap/lookUpCity.xml");
 
 
 
