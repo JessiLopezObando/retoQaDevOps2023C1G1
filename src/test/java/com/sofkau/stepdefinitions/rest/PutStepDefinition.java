@@ -10,6 +10,7 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 
+import static com.sofkau.questions.rest.ReturnRegister.returnRegister;
 import static com.sofkau.questions.rest.ReturnRegisterSuccessfulJsonResponse.returnRegisterSuccessfulJsonResponse;
 import static com.sofkau.tasks.rest.DoPut.doPut;
 import static com.sofkau.utils.JSONPlaceHolder.JSON_PLACE_HOLDER;
@@ -38,7 +39,7 @@ public class PutStepDefinition extends ApiSetUp {
 
     @Then("the user sees a status {int} and the post he wants to edit {string} the comments")
     public void theUserSeesAStatusAndThePostHeWantsToEdit(Integer int1, String string) {
-        Response actualResponse= returnRegisterSuccessfulJsonResponse().answeredBy(actor);
+        Response actualResponse= returnRegister().answeredBy(actor);
         actor.should(
                 seeThatResponse("El codigo de respuesta es: " + HttpStatus.SC_OK,
                         response -> response.statusCode(int1)),
