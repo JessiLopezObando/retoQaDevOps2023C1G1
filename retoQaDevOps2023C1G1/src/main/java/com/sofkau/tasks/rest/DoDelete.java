@@ -1,4 +1,4 @@
-package com.sofkau.tasks;
+package com.sofkau.tasks.rest;
 
 
 import net.serenitybdd.screenplay.Actor;

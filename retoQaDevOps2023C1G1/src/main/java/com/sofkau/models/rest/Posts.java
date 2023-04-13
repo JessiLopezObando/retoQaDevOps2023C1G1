@@ -1,4 +1,4 @@
-package com.sofkau.models;
+package com.sofkau.models.rest;
 
 public class Posts {
 
