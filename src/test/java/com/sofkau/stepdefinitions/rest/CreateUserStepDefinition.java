@@ -1,10 +1,6 @@
 package com.sofkau.stepdefinitions.rest;
-
-
 import com.sofkau.models.rest.CreateUser;
-
 import com.sofkau.setup.ApiSetUp;
-
 import com.sofkau.tasks.rest.DoPost;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,7 +9,6 @@ import io.restassured.path.json.JsonPath;
 import net.serenitybdd.rest.SerenityRest;
 import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
-
 import static com.sofkau.utils.ReqresResources.CREATE_USERS;
 import static com.sofkau.utils.ReqresResources.REQRES_BASE_URL;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
@@ -27,7 +22,12 @@ public class CreateUserStepDefinition extends ApiSetUp{
 
     @Given("the manager is in the API")
     public void theManagerIsInTheAPI() {
-        setUp(REQRES_BASE_URL.getValue());
+        try {
+            setUp(REQRES_BASE_URL.getValue());
+            LOGGER.info("Se ha establecido la conexion con exito a la API.");
+        } catch (Exception e) {
+            LOGGER.warn("No se pudo establecer la conexion con la API: " + e.getMessage());
+        }
 
     }
 

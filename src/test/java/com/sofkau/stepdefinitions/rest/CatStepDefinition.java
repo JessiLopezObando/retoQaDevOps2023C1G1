@@ -8,7 +8,6 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.log4j.Logger;
-
 import static io.restassured.RestAssured.given;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.notNullValue;

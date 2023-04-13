@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
 import org.apache.log4j.Logger;
-
 import static com.sofkau.tasks.rest.DoDelete.doDelete;
 import static com.sofkau.utils.Path.DELETE_PRODUCTS;
 import static com.sofkau.utils.Path.DELETE_PRODUCTS_BASE;
