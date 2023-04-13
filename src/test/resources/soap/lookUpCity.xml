@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tem:LookupCity>
+            <!--Optional:-->
+            <tem:zip>%s</tem:zip>
+        </tem:LookupCity>
+    </soapenv:Body>
+</soapenv:Envelope>
