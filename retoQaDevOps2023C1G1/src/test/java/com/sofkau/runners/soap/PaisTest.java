@@ -1,6 +1,5 @@
 package com.sofkau.runners.soap;
 
-
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
@@ -10,7 +9,7 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = {"src/test/resources/features/soap/nombrepais.feature"},
         glue = {"com.sofkau.stepdefinitions"},
-        tags = {}
+        tags = {""}
 )
 public class PaisTest {
 }
