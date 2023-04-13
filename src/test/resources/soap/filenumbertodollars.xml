@@ -1,0 +1,7 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <NumberToDollars xmlns="http://www.dataaccess.com/webservicesserver/">
+            <dNum>%s</dNum>
+        </NumberToDollars>
+    </soap:Body>
+</soap:Envelope>
