@@ -3,9 +3,12 @@ package com.sofkau.utils;
 public enum JSONPlaceHolder {
 
     PLACE_HOLDER_BASE_URL("https://jsonplaceholder.typicode.com/"),
-    GET_POSTS("posts/"),
+
+    GET_RESOURCE_USUARIO("users/"),
+    JSON_PLACE_HOLDER("https://jsonplaceholder.typicode.com/"),
     GET_RESOURCE("posts/"),
-    GET_RESOURCE_USUARIO("users/");
+    GET_POSTS("posts/"),
+    PUT_RESOURCE("comments/");
 
     private final String  value;
 

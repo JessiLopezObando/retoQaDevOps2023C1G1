@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:CountryIntPhoneCode>
+            <web:sCountryISOCode>%s</web:sCountryISOCode>
+        </web:CountryIntPhoneCode>
+    </soapenv:Body>
+</soapenv:Envelope>

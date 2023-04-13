@@ -1,0 +1,1 @@
+5 2javaX hr1src/main/java/com/sofkau/tasks/rest/DoDelete.java
