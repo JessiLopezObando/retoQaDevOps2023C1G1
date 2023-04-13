@@ -18,9 +18,13 @@ public enum Path {
 
     SOAP_NUMERO_BASE_URL("https://www.dataaccess.com/"),
     RESOURCE_NUMERO("webservicesserver/numberconversion.wso"),
-    BODY_PATH_NUMERO("src/test/resources/soap/fileNumeroALetra.xml");
+    BODY_PATH_NUMERO("src/test/resources/soap/fileNumeroALetra.xml"),
 
 
+    //Ruta Jessica
+    SOAP_FIND_BY_NAME_BASE_URL("http://www.crcind.com/"),
+    RESOURCE_FIND_BY_NAME("csp/samples/SOAP.Demo.cls"),
+    BODY_FIND_BY_NAME_PATH("src/test/resources/soap/findByName.xml");
 
 
 

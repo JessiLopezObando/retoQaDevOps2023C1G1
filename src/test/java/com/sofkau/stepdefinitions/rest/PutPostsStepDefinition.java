@@ -69,7 +69,7 @@ public class PutPostsStepDefinition extends ApiSetUp {
                     seeThatResponse("El codigo de respuesta es: " + HttpStatus.SC_OK,
                             response -> response.statusCode(code))
             );
-            LOGGER.info("El código de respuesta es: " + lastResponse().statusCode());
+            LOGGER.info("El codigo de respuesta es: " + lastResponse().statusCode());
         } catch (Exception e){
             LOGGER.warn(e.getMessage());
         }

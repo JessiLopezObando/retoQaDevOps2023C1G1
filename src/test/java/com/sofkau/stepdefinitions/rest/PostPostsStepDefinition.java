@@ -56,7 +56,7 @@ public class PostPostsStepDefinition extends ApiSetUp {
             );
             LOGGER.info("Respuesta de la API con la peticion POST: " + lastResponse().asString());
         } catch (Exception e) {
-            LOGGER.error("OcurriO un error al enviar la solicitud POST: " + e.getMessage());
+            LOGGER.error("Ocurrio un error al enviar la solicitud POST: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -70,7 +70,7 @@ public class PostPostsStepDefinition extends ApiSetUp {
                     seeThatResponse("El codigo de respuesta es: " + HttpStatus.SC_OK,
                             response -> response.statusCode(code))
             );
-            LOGGER.info("El código de respuesta es: " + lastResponse().statusCode());
+            LOGGER.info("El codigo de respuesta es: " + lastResponse().statusCode());
         } catch (Exception e){
           LOGGER.warn(e.getMessage());
         }
