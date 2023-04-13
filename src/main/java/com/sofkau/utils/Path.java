@@ -18,7 +18,13 @@ public enum Path {
 
     SOAP_NUMERO_BASE_URL("https://www.dataaccess.com/"),
     RESOURCE_NUMERO("webservicesserver/numberconversion.wso"),
-    BODY_PATH_NUMERO("src/test/resources/soap/fileNumeroALetra.xml");
+    BODY_PATH_NUMERO("src/test/resources/soap/fileNumeroALetra.xml"),
+
+
+
+    CAT_BASE_URI("https://catfact.ninja/fact?max_length=140"),
+    DELETE_PRODUCTS_BASE("https://dummyjson.com/"),
+    DELETE_PRODUCTS("products/");
 
 
 
