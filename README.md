@@ -1,7 +1,6 @@
 # Reto DevOps - Grupo #1 
 Este proyecto contiene la automatización de pruebas para APIs REST y SOAP.
 
-
 ## **Requisitos**
 Para este proyecto, se necesitará:
 
