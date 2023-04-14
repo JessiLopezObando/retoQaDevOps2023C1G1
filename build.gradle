@@ -22,15 +22,6 @@ buildscript {
     }
 }
 
-sonarqube {
-    properties {
-        property 'sonar.host.url', 'https://5ec4-181-132-7-56.ngrok-free.app' // URL del servidor de SonarQube
-        property 'sonar.login', 'sqp_caad4d9dbb168d1e7f222e526053fb1c33158697' // Token de acceso de SonarQube
-        property 'sonar.projectKey', 'RetoQADevOps' // Clave del proyecto en SonarQube
-        property 'sonar.projectName', 'RetoQADevOps' // Nombre del proyecto en SonarQube
-    }
-}
-
 
 ext {
     junitVersion = '5.7.2'
