@@ -24,8 +24,8 @@ buildscript {
 
 sonarqube {
     properties {
-        property 'sonar.host.url', 'http://localhost:9000' // URL del servidor de SonarQube
-        property 'sonar.login', 'sqp_91e6d9a4feefb4e0dd911d5128c288f1fdbb118e' // Token de acceso de SonarQube
+        property 'sonar.host.url', 'https://5ec4-181-132-7-56.ngrok-free.app' // URL del servidor de SonarQube
+        property 'sonar.login', 'sqp_caad4d9dbb168d1e7f222e526053fb1c33158697' // Token de acceso de SonarQube
         property 'sonar.projectKey', 'RetoQADevOps' // Clave del proyecto en SonarQube
         property 'sonar.projectName', 'RetoQADevOps' // Nombre del proyecto en SonarQube
     }
